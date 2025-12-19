@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blogger - Modern Blogging Platform
 
-## Getting Started
+Welcome to **Blogger**!  
+A modern blogging platform crafted for passionate writers, curious readers, and the stories that connect us all.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Beautiful, responsive blog layouts
+- Light & dark theme support (remembers your preference!)
+- Easy article exploration and author highlights
+- Accessible and performant by design
+- Simple contact and about pages
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Stack
 
-## Learn More
+- **Next.js** (App Router, Server Components)
+- **React** for UI
+- **Tailwind CSS** for style and dark mode
+- **Lucide** for clean icons
+- Demo/blog data from [jsonfakery.com](https://jsonfakery.com)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌗 Dark Mode
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project uses a context-based dark mode switcher.  
+Your preference is saved to `localStorage` and respects your last visit.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/` — Home, featured and recent blogs
+- `/blogs/[id]` — Blog detail
+- `/about` — About the platform and team
+- `/contact` — Simple contact form
+
+---
+
+## 💡 Getting Started
+
+1. **Install dependencies**  
+   ```bash
+   npm install
+   ```
+
+2. **Run locally**  
+   ```bash
+   npm run dev
+   ```
+
+3. Navigate to [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🤝 Contributing
+
+Pull requests & suggestions are welcome!  
+See [issues](https://github.com/your-repo/blogger/issues) to report bugs or features.
+
+---
+
+## 👤 Developer Info
+
+**Rajiv Sharma**  
+- 📧 [rajivsharma93056@gmail.com](mailto:rajivsharma93056@gmail.com)
+- 🌐 [Portfolio](https://rajivsharma.vercel.app)
+
+---
+
+## 📖 License
+
+MIT License
+
+---
+
+Made with ❤️ by the Blogger Team.
+
