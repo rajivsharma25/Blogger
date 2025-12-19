@@ -41,29 +41,6 @@ Your preference is saved to `localStorage` and respects your last visit.
 
 ---
 
-## 💡 Getting Started
-
-1. **Install dependencies**  
-   ```bash
-   npm install
-   ```
-
-2. **Run locally**  
-   ```bash
-   npm run dev
-   ```
-
-3. Navigate to [http://localhost:3000](http://localhost:3000)
-
----
-
-## 🤝 Contributing
-
-Pull requests & suggestions are welcome!  
-See [issues](https://github.com/your-repo/blogger/issues) to report bugs or features.
-
----
-
 ## 👤 Developer Info
 
 **Rajiv Sharma**  
@@ -72,11 +49,5 @@ See [issues](https://github.com/your-repo/blogger/issues) to report bugs or feat
 
 ---
 
-## 📖 License
-
-MIT License
-
----
-
-Made with ❤️ by the Blogger Team.
+Made with ❤️ by Rajiv Sharma.
 
