@@ -21,10 +21,6 @@ const FeaturedBlog = async () => {
     console.error("Error loading featured blog:", error);
   }
 
-  if (!data || !data.title) {
-    return null;
-  }
-
   return (
     <div className="w-full bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 py-10">

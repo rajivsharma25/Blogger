@@ -20,11 +20,7 @@ const LatestBlogs = async () => {
   } catch (error) {
     console.error("Error loading latest blogs:", error);
   }
-
-  if (!data || !data.data) {
-    return null;
-  }
-
+  
   return (
     <div className="bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 text-center py-8">
