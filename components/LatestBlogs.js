@@ -1,7 +1,13 @@
 import BlogItem from "./BlogItem";
 
+export const dynamic = "force-dynamic";
+
 const LatestBlogs = async () => {
-  const response = await fetch("https://jsonfakery.com/blogs/paginated?page=1");
+  const response = await fetch(
+    "https://jsonfakery.com/blogs/paginated?page=1",
+    { cache: "no-store" }
+  );
+
   const data = await response.json();
 
   return (

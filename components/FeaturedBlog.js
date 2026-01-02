@@ -3,8 +3,12 @@ import React from "react";
 import { Star } from "lucide-react";
 import ReadMore from "./ReadMore";
 
+export const dynamic = "force-dynamic";
+
 const FeaturedBlog = async () => {
-  const response = await fetch("https://jsonfakery.com/blogs/random");
+  const response = await fetch("https://jsonfakery.com/blogs/random", {
+    cache: "no-store",
+  });
   const data = await response.json();
 
   return (
