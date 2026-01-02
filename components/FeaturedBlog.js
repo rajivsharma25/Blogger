@@ -4,10 +4,26 @@ import { Star } from "lucide-react";
 import ReadMore from "./ReadMore";
 
 const FeaturedBlog = async () => {
-  const response = await fetch("https://jsonfakery.com/blogs/random", {
-    next: { revalidate: 60 },
-  });
-  const data = await response.json();
+  let data = null;
+  try {
+    const response = await fetch("https://jsonfakery.com/blogs/random", {
+      next: { revalidate: 60 },
+    });
+
+    if (response.ok) {
+      data = await response.json();
+    } else {
+      console.error(
+        `Error fetching featured blog: ${response.status} ${response.statusText}`
+      );
+    }
+  } catch (error) {
+    console.error("Error loading featured blog:", error);
+  }
+
+  if (!data || !data.title) {
+    return null;
+  }
 
   return (
     <div className="w-full bg-white dark:bg-gray-950">
@@ -34,7 +50,9 @@ const FeaturedBlog = async () => {
                 Featured
               </span>
             </div>
-            <h2 className="text-2xl font-semibold mb-2 dark:text-white">{data.title}</h2>
+            <h2 className="text-2xl font-semibold mb-2 dark:text-white">
+              {data.title}
+            </h2>
             {/* Author and Created At */}
             <div className="flex items-center gap-2 mb-1">
               {data.user?.first_name && (

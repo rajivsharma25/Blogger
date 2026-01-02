@@ -1,19 +1,36 @@
 import BlogItem from "./BlogItem";
 
 const LatestBlogs = async () => {
-  const response = await fetch(
-    "https://jsonfakery.com/blogs/paginated?page=1",
-    {
-      next: { revalidate: 60 },
-    }
-  );
+  let data = null;
+  try {
+    const response = await fetch(
+      "https://jsonfakery.com/blogs/paginated?page=1",
+      {
+        next: { revalidate: 60 },
+      }
+    );
 
-  const data = await response.json();
+    if (response.ok) {
+      data = await response.json();
+    } else {
+      console.error(
+        `Error fetching latest blogs: ${response.status} ${response.statusText}`
+      );
+    }
+  } catch (error) {
+    console.error("Error loading latest blogs:", error);
+  }
+
+  if (!data || !data.data) {
+    return null;
+  }
 
   return (
     <div className="bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 text-center py-8">
-        <h2 className="text-3xl font-bold mb-2 dark:text-white">Our Latest Blogs</h2>
+        <h2 className="text-3xl font-bold mb-2 dark:text-white">
+          Our Latest Blogs
+        </h2>
         <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
           Stay updated with our newest posts. Explore the latest thoughts,
           trends, and insights from our team.
