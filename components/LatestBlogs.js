@@ -1,24 +1,8 @@
 import BlogItem from "./BlogItem";
 
-const LatestBlogs = async () => { 
-  let data = null;
-  try {
-    const response = await fetch(
-      "https://jsonfakery.com/blogs/paginated?page=1",
-      {
-        next: { revalidate: 60 },
-      }
-    );
-    if (response.ok) {
-      data = await response.json();
-    } else {
-      console.error(
-        `Error fetching latest blogs: ${response.status} ${response.statusText}`
-      );
-    }
-  } catch (error) {
-    console.error("Error loading latest blogs:", error);
-  }
+const LatestBlogs = async () => {
+  const response = await fetch("https://jsonfakery.com/blogs/paginated?page=1");
+  const data = await response.json();
 
   return (
     <div className="bg-white dark:bg-gray-950">
