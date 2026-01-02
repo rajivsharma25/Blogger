@@ -4,13 +4,14 @@ import { Star } from "lucide-react";
 import ReadMore from "./ReadMore";
 
 const FeaturedBlog = async () => {
+  let data = null;
   try {
     const response = await fetch("https://jsonfakery.com/blogs/random", {
       next: { revalidate: 60 },
     });
 
     if (response.ok) {
-      const data = await response.json();
+      data = await response.json();
     } else {
       console.error(
         `Error fetching featured blog: ${response.status} ${response.statusText}`
